@@ -70,10 +70,10 @@ int main(){
      start_time=omp_get_wtime();
      mergeSortParallel(arr_par,0,n-1);
      double time_par=omp_get_wtime()-start_time;
-     printf("Parallel Merge Sort Time :%f seconds\n, time_par");
+     printf("Parallel Merge Sort Time :%f seconds\n", time_par);
 
      printf("\nDifference (Sequential-Parallel):%f seconds\n",time_seq-time_par);
-     if(time_par>0)printf("Speedup: %.2fx\n,time_seq/time_par");
+     if(time_par>0)printf("Speedup: %.2fx\n",time_seq/time_par);
 
      printf("\nVerification:First 20 elements of the sorted array:\n");
      for(int i=0;i<(n<20?n:20);i++)printf("%d ",arr_par[i]);
